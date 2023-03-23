@@ -18,6 +18,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/test', function (){
-    return 'api';
+Route::prefix('express')->group(function(){
+    Route::get('/test', function (){
+        return 'api';
+    });
 });
